@@ -1,0 +1,10 @@
+YOLO Benchmark Result - Tea Disease Detection
+================================================
+
+Best model : yolo11m.pt
+mAP50      : 0.7286164680216447
+mAP50-95   : 0.4410995163915928
+Precision  : 0.7150180252903572
+Recall     : 0.7138116710991678
+
+Full table saved in yolo_benchmark_summary.csv

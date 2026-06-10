@@ -1,0 +1,11 @@
+YOLO26 Training Result - Tea Disease Detection
+================================================
+
+Best model : yolo26m.pt
+mAP50      : 0.6783891161425701
+mAP50-95   : 0.421612219616439
+Precision  : 0.6713321902902901
+Recall     : 0.6737775278797384
+
+Architecture: YOLO26 (NMS-Free, Edge-Optimized, Ultralytics Jan 2026)
+Full table saved in yolo26_benchmark_summary.csv

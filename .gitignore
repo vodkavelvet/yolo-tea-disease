@@ -1,0 +1,168 @@
+# ============================================================
+# 🍵 YOLO Tea Disease Detection Project - .gitignore
+# ============================================================
+# Project: Multi-YOLO Benchmark (YOLOv8, YOLO11, YOLO26)
+# Purpose: Optimize repository for GitHub showcase
+# ============================================================
+
+# ========== PYTHON ENVIRONMENT ==========
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.ipynb_checkpoints/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========== OS FILES ==========
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========== VIDEO FILES (100MB+) ==========
+# Video terlalu besar untuk GitHub (limit 100MB per file)
+# Hasil inferensi bisa di-generate ulang dengan test_local.py
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+
+# ========== DATASET FILES (LARGE) ==========
+# Dataset bisa di-download ulang dari Roboflow
+# Menghemat ruang repo dan mempercepat clone
+04_outputs/*/tea_disease_*/
+04_outputs/*/dataset/
+**/test/images/
+**/test/labels/
+**/train/images/
+**/train/labels/
+**/valid/images/
+**/valid/labels/
+
+# ========== RAW KAGGLE OUTPUTS (DUPLIKAT) ==========
+# Folder ini berisi dataset lengkap + runs (sangat besar)
+# Metrics penting sudah di-copy ke folder parent
+04_outputs/yolo8_v10/full_kaggle_output/
+04_outputs/yolo8_v10/local_models/
+04_outputs/yolo8_v10_complete_csv/
+04_outputs/yolo11_downloaded_output/
+04_outputs/yolo26_downloaded_output/
+04_outputs/yolo*/runs/
+kaggle_output_yolo11/
+
+# ========== TRAINING RUNS (INTERMEDIATE FILES) ==========
+# Training checkpoints & logs intermediate (keep final only)
+**/runs/detect/train*/weights/epoch*.pt
+**/runs/detect/train*/events.out.tfevents.*
+**/runs/detect/val*/
+04_outputs/*/runs/
+
+# ========== PRETRAINED BASE MODELS ==========
+# Model dasar bisa di-download ulang dari Ultralytics
+# https://github.com/ultralytics/ultralytics
+05_pretrained_models/
+yolov8*.pt
+yolo11*.pt
+yolo26*.pt
+# EXCEPTION: Keep trained models (best.pt, best_overall.pt, last.pt)
+!04_outputs/**/best*.pt
+!04_outputs/**/last.pt
+
+# ========== INPUT MEDIA (LARGE TEST FILES) ==========
+# Video input untuk testing (bisa disediakan link eksternal)
+06_input_media/*.mp4
+06_input_media/*.avi
+06_input_media/*.mov
+# Keep sample images if small
+!06_input_media/*.jpg
+!06_input_media/*.jpeg
+!06_input_media/*.png
+
+# ========== BACKUP FILES ==========
+# Backup tidak perlu di-push ke GitHub
+09_backups/
+*.backup
+*.bak
+*_backup.*
+*_old.*
+
+# ========== PERSONAL/PRIVATE DOCUMENTS ==========
+# Dokumen pribadi yang tidak relevan dengan project
+08_docs/language_assessment/
+
+# ========== LOGS & TEMPORARY FILES ==========
+*.log
+*.tmp
+*.temp
+*_tmp/
+.kaggle/
+kaggle.json
+
+# ========== IDE & EDITOR FILES ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ========== GIT LFS (if needed) ==========
+# Uncomment jika menggunakan Git LFS untuk file besar
+# *.pt filter=lfs diff=lfs merge=lfs -text
+
+# ============================================================
+# ✅ FILES YANG AKAN DI-PUSH KE GITHUB:
+# ============================================================
+# ✓ Training notebooks (.ipynb)
+# ✓ Shell scripts (run.sh, check_status.sh)
+# ✓ Model weights - trained (.pt files in 04_outputs/)
+# ✓ Metrics plots (.png - confusion matrix, curves)
+# ✓ Comparison matrix (model_comparison_matrix.png)
+# ✓ CSV results (yolo*_results.csv)
+# ✓ Benchmark results (.txt files)
+# ✓ Documentation (README*.md)
+# ✓ Testing tools (07_tools/*.py)
+# ✓ Kernel metadata (kernel-metadata.json)
+# ============================================================
+
+
+# ========== INDONESIAN DOCUMENTATION (FOR INTERNATIONAL REPO) ==========
+# Indonesian language guides - keep locally, exclude from GitHub
+CEK_STATUS_GIT.sh
+DELETE_GIT_START_FRESH.txt
+FILES_TO_PUSH_SUMMARY.txt
+FIX_AND_PUSH.sh
+GITHUB_PUSH_GUIDE.md
+HAPUS_FILE_PERSONAL.md
+LANGKAH_PUSH_MANUAL.md
+MANUAL_CHECK_GUIDE.md
+MULAI_DARI_AWAL.md
+MULAI_DARI_SINI.md
+PUSH_CHECKLIST.md
+QUICK_CHECK.txt
+QUICK_COMMANDS.txt
+START_FRESH.sh
+remove_personal_files.sh
+RINGKASAN_TEST_YOLO11.md
+README_STRUKTUR_PROJECT.md
+08_docs/CARA_DOWNLOAD_METRICS_KAGGLE.md
+08_docs/JAWABAN_CSV_STATUS.md
+08_docs/LANGKAH_SELANJUTNYA_KAGGLE.md
+08_docs/RINGKASAN_DOWNLOAD_METRICS.md
+08_docs/STATUS_CSV_DAN_METRICS.md
+
+# ========== EXCLUDE NON-RELEVANT TOOLS ==========
+07_tools/car_counting.py

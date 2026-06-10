@@ -1,0 +1,16 @@
+{
+  "id": "teukuradja/yolov8-training",
+  "title": "YOLOv8 Training",
+  "code_file": "Kaggle_Training_YOLOv8.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "gpu_type": "nvidiaTeslaT4",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
